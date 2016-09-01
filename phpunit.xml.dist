@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         syntaxCheck="true"
+         stopOnFailure="false"
+         bootstrap="tests/bootstrap.php"
+        >
+    <testsuites>
+        <testsuite name="Chronos Tests">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <logging>
+        <!--lowUpperBound="25" highLowerBound="55"-->
+        <log type="coverage-clover" target="build/logs/clover.xml" />
+    </logging>
+
+    <!-- Filter to make sure we don't count venders and Tests in the coverage report -->
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+            <exclude>
+                <directory>./vendor</directory>
+                <directory>./vendors</directory>
+                <directory>./tests</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

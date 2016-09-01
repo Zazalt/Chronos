@@ -1,0 +1,38 @@
+{
+    "name": "zazalt/chronos",
+    "description": "Chronos",
+    "homepage": "https://github.com/Zazalt/Chronos",
+    "keywords": [
+        "string"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zazalt",
+            "email": "example@example.com",
+            "homepage": "https://github.com/Zazalt/Chronos"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zazalt\\Chronos\\": "src/"
+        }
+    },
+    "extra": {
+        "zazalt": {
+            "language": "php",
+            "title": "Chronos",
+            "description": [
+                "Chronos is a PHP library/package for date and time management."
+            ],
+            "github": "Zazalt",
+            "repository": "Chronos",
+            "version": "beta",
+            "generateUsage": true,
+            "examples": false
+        }
+    }
+}

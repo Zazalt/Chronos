@@ -1,0 +1,9 @@
+.DS_Store
+phpunit.xml
+*.log
+*.url
+*/Thumbs.db
+*pull-commit-push*.cmd
+*zcomposer-re-install.cmd
+/vendor
+composer.lock
