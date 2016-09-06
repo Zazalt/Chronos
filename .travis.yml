@@ -11,6 +11,8 @@ install:
 
 before_script:
   - mkdir -p build/logs
+  - composer self-update
+  - composer install --no-interaction --prefer-source
 
 script:
   - phpunit --coverage-clover build/logs/clover.xml
