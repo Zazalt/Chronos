@@ -29,6 +29,7 @@
                 <directory>./vendor</directory>
                 <directory>./vendors</directory>
                 <directory>./tests</directory>
+                <directory>./src/Templates</directory>
             </exclude>
         </whitelist>
     </filter>
