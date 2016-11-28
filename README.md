@@ -79,4 +79,9 @@ $Chronos->monthsBetweenTwoDates($startDate, $endDate);
  * @return  integer
  */
 $Chronos->yearsBetweenTwoDates($startDate, $endDate);
+
+/**
+ * Not implemented/documented, yet!
+ */
+$Chronos->seconds2HMS($secs);
 ```
