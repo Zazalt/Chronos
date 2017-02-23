@@ -12,7 +12,7 @@ class Chronos
      * @param   string  $humanFormat
      * @return  string
      */
-    public function dateToMachineDate($datetime, $humanFormat)
+    public function dateToMachineDate($datetime, $humanFormat): string
     {
         $parsedDate = date_parse_from_format($humanFormat, $datetime);
         return $parsedDate['year'] .'-'. str_pad($parsedDate['month'], 2, 0, STR_PAD_LEFT) .'-'. str_pad($parsedDate['day'], 2, 0, STR_PAD_LEFT);
@@ -26,7 +26,7 @@ class Chronos
      * @param   string  $humanFormat
      * @return  string
      */
-    public function dateToMachineDateTime($datetime, $humanFormat)
+    public function dateToMachineDateTime($datetime, $humanFormat): string
     {
         $parsedDate = date_parse_from_format($humanFormat, $datetime);
         return $parsedDate['year'] .'-'. str_pad($parsedDate['month'], 2, 0, STR_PAD_LEFT) .'-'. str_pad($parsedDate['day'], 2, 0, STR_PAD_LEFT) .' '. (!empty($parsedDate['hour']) ? $parsedDate['hour'] : '00') .':'. (!empty($parsedDate['minute']) ? $parsedDate['minute'] : '00') .':'. (!empty($parsedDate['second']) ? $parsedDate['second'] : '00');
@@ -53,7 +53,7 @@ class Chronos
      *
      * @docs    http://stackoverflow.com/questions/2040560/finding-the-number-of-days-between-two-dates
      */
-    public function daysBetweenTwoDates($startDate, $endDate)
+    public function daysBetweenTwoDates($startDate, $endDate): int
     {
         $startDate  = new \DateTime($startDate);
         $endDate    = new \DateTime($endDate);
@@ -68,7 +68,7 @@ class Chronos
      * @param   date    $endDate
      * @return  integer
      */
-    public function monthsBetweenTwoDates($startDate, $endDate)
+    public function monthsBetweenTwoDates($startDate, $endDate): int
     {
         $startDate  = new \DateTime($startDate);
         $endDate    = new \DateTime($endDate);
@@ -82,14 +82,14 @@ class Chronos
      * @param   date    $endDate
      * @return  integer
      */
-    public function yearsBetweenTwoDates($startDate, $endDate)
+    public function yearsBetweenTwoDates($startDate, $endDate): int
     {
         $startDate  = new \DateTime($startDate);
         $endDate    = new \DateTime($endDate);
         return $startDate->diff($endDate)->y;
     }
 
-    public function seconds2HMS($secs)
+    public function seconds2HMS(int $secs): string
     {
         if($secs < 0) {
             return false;

@@ -18,7 +18,7 @@ class ZazaltTest extends \PHPUnit_Framework_TestCase
 {
     public function loader($what, $params = null)
     {
-        $testedClassName    = str_replace('Test', '', substr(strrchr(get_class($what), "\\"), 1));
+        $testedClassName    = str_replace('Test', '', substr(strrchr($what, "\\"), 1));
         $testedClassPath    = 'Zazalt\\'.$testedClassName .'\\'. $testedClassName;
         require_once getcwd() . '/src/'. $testedClassName .'.php';
 

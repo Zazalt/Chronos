@@ -2,13 +2,15 @@
 
 namespace Zazalt\Chronos\Tests;
 
+use Zazalt\Chronos\Chronos;
+
 class ChronosTest extends \Zazalt\Chronos\Tests\ZazaltTest
 {
     protected $that;
 
     public function __construct()
     {
-        parent::loader($this);
+        parent::loader(Chronos::class);
     }
 
     public function testDateToMachineDate()
